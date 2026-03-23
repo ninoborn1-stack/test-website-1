@@ -13,9 +13,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- Three.js: 3D-Rendering Library — für den Partikel-Hero -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
-
   <!-- Import Map: löst bare specifier 'three' in ES Modules auf -->
   <script type="importmap">
   {
@@ -611,10 +608,10 @@
   </div>
 
   <!-- main.js am Ende — damit das DOM schon geladen ist wenn JS läuft -->
-  <script src="main.js?v=30"></script>
+  <script type="module" src="main.js?v=31"></script>
 
   <!-- head-scene.js als ES Module (nutzt Import Map für 'three') -->
-  <script type="module" src="head-scene.js?v=12"></script>
+  <script type="module" src="head-scene.js?v=13"></script>
 
 
 </body>

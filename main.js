@@ -1,3 +1,5 @@
+import * as THREE from 'three';
+
 /* ============================================================
    MAIN.JS
    Drei Module:
