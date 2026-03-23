@@ -1016,6 +1016,82 @@ footer {
 }
 
 /* ============================================================
+   LIGHT MODE — überschreibt CSS-Variablen wenn data-theme="light"
+   ============================================================ */
+
+[data-theme="light"] {
+  --bg:         #f4f4ef;
+  --surface:    #eaeae3;
+  --border:     #d2d2ca;
+  --text:       #111111;
+  --muted:      #888888;
+  --accent:     #5a9600;
+  --accent-dim: rgba(90, 150, 0, 0.12);
+}
+
+[data-theme="light"] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ============================================================
+   SITE CONTROLS — Fixed bottom-right: Language + Theme
+   ============================================================ */
+
+.site-controls {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 8px;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.35);
+  transition: background var(--t-med), border-color var(--t-med);
+}
+
+.ctrl-btn {
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+  line-height: 1.4;
+  user-select: none;
+}
+
+.ctrl-btn:hover {
+  color: var(--text);
+}
+
+.ctrl-btn.active {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.theme-btn {
+  font-size: 13px;
+  padding: 3px 8px;
+}
+
+.site-controls__sep {
+  width: 1px;
+  height: 14px;
+  background: var(--border);
+  margin: 0 3px;
+  flex-shrink: 0;
+}
+
+/* ============================================================
    SCROLL-REVEAL BASIS
    Elemente die per GSAP animiert werden starten unsichtbar.
    ============================================================ */

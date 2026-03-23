@@ -600,8 +600,18 @@
     <span>Built with Three.js + GSAP</span>
   </footer>
 
+  <!-- ============================================================
+       SITE CONTROLS — Fixed bottom-right: Language + Theme
+       ============================================================ -->
+  <div class="site-controls">
+    <button class="ctrl-btn lang-btn" id="lang-en">EN</button>
+    <button class="ctrl-btn lang-btn" id="lang-de">DE</button>
+    <div class="site-controls__sep"></div>
+    <button class="ctrl-btn theme-btn" id="theme-toggle" aria-label="Toggle theme">☀️</button>
+  </div>
+
   <!-- main.js am Ende — damit das DOM schon geladen ist wenn JS läuft -->
-  <script src="main.js?v=29"></script>
+  <script src="main.js?v=30"></script>
 
   <!-- head-scene.js als ES Module (nutzt Import Map für 'three') -->
   <script type="module" src="head-scene.js?v=12"></script>

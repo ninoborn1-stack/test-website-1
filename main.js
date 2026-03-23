@@ -767,3 +767,301 @@ window.addEventListener('resize', () => {
   });
 });
 
+
+/* ============================================================
+   12. LANGUAGE SWITCHER + THEME TOGGLE
+   EN / DE übersetzungen + Dark / Light mode.
+   Einstellungen werden in localStorage gespeichert.
+   ============================================================ */
+
+(function() {
+
+  /* ---- Übersetzungen ---------------------------------------- */
+  const I18N = {
+    en: {
+      heroEyebrow:      'Creative Developer & Designer',
+      heroTagline:      'Interfaces that think. Experiences that move.',
+      heroScroll:       'scroll',
+      workLabel:        'Portfolio',
+      workHeading:      'Selected Work',
+      proj0cat:         'SAAS LANDING PAGE',
+      proj0title:       'Interactive SaaS Landing Page',
+      proj0desc:        'Full animated landing page with interactive 3D hero, pricing section and smooth page transitions.',
+      proj1cat:         'MOTION WEBSITE',
+      proj1title:       'Motion Portfolio',
+      proj1desc:        'Personal portfolio with physics-based animations, custom cursor and particle effects.',
+      proj2cat:         'WEB APPLICATION',
+      proj2title:       'E-Commerce Dashboard',
+      proj2desc:        'Admin dashboard with real-time data visualization, inventory management and order tracking.',
+      proj3cat:         'MULTI-PAGE WEBSITE',
+      proj3title:       'Full Business Website',
+      proj3desc:        'Complete business presence with smooth animations, CMS integration and mobile-first responsive design.',
+      aboutLabel:       'About',
+      aboutHeading:     'Building at the intersection of<br />design &amp; engineering.',
+      aboutText0:       "I'm a creative developer based in Switzerland, focused on crafting digital experiences that combine precise engineering with considered visual design.",
+      aboutText1:       'My work lives at the boundary between what a browser can render and what a human can perceive — interactive, fast, and built with intent.',
+      aboutValuesLabel: 'WHAT I STAND FOR',
+      val0title:        'Fast Delivery',
+      val0desc:         'First working version within 48 hours. No endless waiting, no vague timelines.',
+      val1title:        'Reliability',
+      val1desc:         'What I commit to, I deliver. Clear communication throughout every project.',
+      val2title:        'Strategic Thinking',
+      val2desc:         'I ask the right questions before I build. Your goals drive every design decision.',
+      val3title:        'Clean, Modern Craft',
+      val3desc:         'No bloat, no templates. Every line of code and every pixel is intentional.',
+      skillsLabel:      'Expertise',
+      skillsHeading:    'What I work with',
+      pricingLabel:     'Pricing',
+      pricingHeading:   'Fixed prices. No surprises.',
+      pricingSub:       'Fixed-price packages for common needs. Custom quotes available — just ask.',
+      tier0: 'STARTER',   period0: 'one-time · 5 day delivery',
+      feat00: '1-page landing page', feat01: 'Mobile responsive', feat02: 'Contact form',
+      feat03: 'GitHub deploy', feat04: '1 revision round',
+      cta0: 'Get started',
+      badge1: 'MOST POPULAR', tier1: 'PROFESSIONAL', period1: 'one-time · 10 day delivery',
+      feat10: 'Multi-page website (up to 5)', feat11: 'WordPress or custom HTML/CSS/JS',
+      feat12: 'Animations & interactions', feat13: 'SEO basics + Google Analytics',
+      feat14: '3 revision rounds', feat15: '2 weeks post-delivery support',
+      cta1: 'Get started',
+      tier2: 'CUSTOM', period2: 'scoped to your project',
+      feat20: 'Web apps & dashboards', feat21: 'Python automation & APIs',
+      feat22: 'WooCommerce / e-commerce', feat23: 'Ongoing retainer possible',
+      feat24: 'Milestone-based billing',
+      cta2: 'Request quote',
+      contactLabel:       'Contact',
+      contactHeading:     "Let's build something.",
+      contactSub:         'Available for freelance projects, collaborations, and full-time roles.',
+      labelName:          'Name',
+      labelEmail:         'E-Mail',
+      labelMessage:       'Message',
+      placeholderMessage: 'Tell me about your project…',
+      submitBtn:          'Send Message',
+      footerBuilt:        'Built with Three.js + GSAP',
+    },
+    de: {
+      heroEyebrow:      'Kreativer Entwickler & Designer',
+      heroTagline:      'Interfaces die denken. Erlebnisse die bewegen.',
+      heroScroll:       'scrollen',
+      workLabel:        'Portfolio',
+      workHeading:      'Ausgewählte Arbeiten',
+      proj0cat:         'SAAS LANDINGPAGE',
+      proj0title:       'Interaktive SaaS Landingpage',
+      proj0desc:        'Vollständig animierte Landingpage mit interaktivem 3D-Hero, Preisbereich und sanften Seitenübergängen.',
+      proj1cat:         'MOTION WEBSITE',
+      proj1title:       'Motion Portfolio',
+      proj1desc:        'Persönliches Portfolio mit physikbasierten Animationen, eigenem Cursor und Partikeleffekten.',
+      proj2cat:         'WEBANWENDUNG',
+      proj2title:       'E-Commerce Dashboard',
+      proj2desc:        'Admin-Dashboard mit Echtzeit-Datenvisualisierung, Lagerverwaltung und Bestellverfolgung.',
+      proj3cat:         'MEHRSEITIGE WEBSITE',
+      proj3title:       'Business-Website',
+      proj3desc:        'Vollständiger Unternehmensauftritt mit flüssigen Animationen, CMS-Integration und mobilem Design.',
+      aboutLabel:       'Über mich',
+      aboutHeading:     'An der Schnittstelle von<br />Design &amp; Entwicklung.',
+      aboutText0:       'Ich bin ein kreativer Entwickler aus der Schweiz, der digitale Erlebnisse erschafft, die präzise Technik mit durchdachtem visuellem Design verbinden.',
+      aboutText1:       'Meine Arbeit bewegt sich an der Grenze dessen, was ein Browser rendern und ein Mensch wahrnehmen kann — interaktiv, schnell und mit Absicht gebaut.',
+      aboutValuesLabel: 'WOFÜR ICH STEHE',
+      val0title:        'Schnelle Lieferung',
+      val0desc:         'Erste funktionierende Version innerhalb von 48 Stunden. Kein endloses Warten, keine vagen Timelines.',
+      val1title:        'Zuverlässigkeit',
+      val1desc:         'Was ich zusage, liefere ich. Klare Kommunikation durch jedes Projekt hindurch.',
+      val2title:        'Strategisches Denken',
+      val2desc:         'Ich stelle die richtigen Fragen bevor ich baue. Deine Ziele treiben jede Designentscheidung an.',
+      val3title:        'Sauberes, modernes Handwerk',
+      val3desc:         'Kein Bloat, keine Templates. Jede Codezeile und jedes Pixel ist bewusst gesetzt.',
+      skillsLabel:      'Expertise',
+      skillsHeading:    'Womit ich arbeite',
+      pricingLabel:     'Preise',
+      pricingHeading:   'Fixpreise. Keine Überraschungen.',
+      pricingSub:       'Festpreispakete für gängige Anforderungen. Individuelle Angebote auf Anfrage.',
+      tier0: 'STARTER',   period0: 'einmalig · 5 Tage Lieferung',
+      feat00: '1-seitige Landingpage', feat01: 'Mobil responsiv', feat02: 'Kontaktformular',
+      feat03: 'GitHub-Deploy', feat04: '1 Überarbeitungsrunde',
+      cta0: 'Jetzt starten',
+      badge1: 'AM BELIEBTESTEN', tier1: 'PROFESSIONAL', period1: 'einmalig · 10 Tage Lieferung',
+      feat10: 'Mehrseitige Website (bis 5)', feat11: 'WordPress oder Custom HTML/CSS/JS',
+      feat12: 'Animationen & Interaktionen', feat13: 'SEO Basics + Google Analytics',
+      feat14: '3 Überarbeitungsrunden', feat15: '2 Wochen Support nach Lieferung',
+      cta1: 'Jetzt starten',
+      tier2: 'INDIVIDUAL', period2: 'auf dein Projekt zugeschnitten',
+      feat20: 'Web-Apps & Dashboards', feat21: 'Python-Automation & APIs',
+      feat22: 'WooCommerce / E-Commerce', feat23: 'Laufendes Retainer möglich',
+      feat24: 'Meilenstein-basierte Abrechnung',
+      cta2: 'Angebot anfragen',
+      contactLabel:       'Kontakt',
+      contactHeading:     'Lass uns etwas bauen.',
+      contactSub:         'Verfügbar für Freelance-Projekte, Kooperationen und Festanstellungen.',
+      labelName:          'Name',
+      labelEmail:         'E-Mail',
+      labelMessage:       'Nachricht',
+      placeholderMessage: 'Erzähl mir von deinem Projekt…',
+      submitBtn:          'Nachricht senden',
+      footerBuilt:        'Gebaut mit Three.js + GSAP',
+    }
+  };
+
+  /* ---- Texte anwenden --------------------------------------- */
+  function applyTranslations(lang) {
+    const t = I18N[lang];
+    if (!t) return;
+    const qs  = sel => document.querySelector(sel);
+    const qsa = sel => document.querySelectorAll(sel);
+
+    // Hero
+    const eyebrow = qs('.hero__eyebrow');
+    if (eyebrow) eyebrow.textContent = t.heroEyebrow;
+    const tagline = qs('.hero__tagline');
+    if (tagline) tagline.textContent = t.heroTagline;
+    const scrollHint = qs('.hero__scroll-hint');
+    if (scrollHint) scrollHint.textContent = t.heroScroll;
+
+    // Work
+    const workLabel = qs('.work__label');
+    if (workLabel) workLabel.textContent = t.workLabel;
+    const workHeading = qs('.work__heading');
+    if (workHeading) workHeading.textContent = t.workHeading;
+    const projData = [
+      [t.proj0cat, t.proj0title, t.proj0desc],
+      [t.proj1cat, t.proj1title, t.proj1desc],
+      [t.proj2cat, t.proj2title, t.proj2desc],
+      [t.proj3cat, t.proj3title, t.proj3desc],
+    ];
+    qsa('.project-card').forEach((card, i) => {
+      if (!projData[i]) return;
+      const [cat, title, desc] = projData[i];
+      const c = card.querySelector('.project-card__cat');
+      const tl = card.querySelector('.project-card__title');
+      const d = card.querySelector('.project-card__desc');
+      if (c) c.textContent = cat;
+      if (tl) tl.textContent = title;
+      if (d) d.textContent = desc;
+    });
+
+    // About
+    const aboutLabel = qs('.about__label');
+    if (aboutLabel) aboutLabel.textContent = t.aboutLabel;
+    const aboutHeading = qs('.about__heading');
+    if (aboutHeading) aboutHeading.innerHTML = t.aboutHeading;
+    const aboutTexts = qsa('.about__text');
+    if (aboutTexts[0]) aboutTexts[0].textContent = t.aboutText0;
+    if (aboutTexts[1]) aboutTexts[1].textContent = t.aboutText1;
+    const valuesLabel = qs('.about__values-label');
+    if (valuesLabel) valuesLabel.textContent = t.aboutValuesLabel;
+    const valData = [
+      [t.val0title, t.val0desc],
+      [t.val1title, t.val1desc],
+      [t.val2title, t.val2desc],
+      [t.val3title, t.val3desc],
+    ];
+    qsa('.about__val-card').forEach((card, i) => {
+      if (!valData[i]) return;
+      const [title, desc] = valData[i];
+      const tl = card.querySelector('.about__val-title');
+      const d = card.querySelector('.about__val-desc');
+      if (tl) tl.textContent = title;
+      if (d) d.textContent = desc;
+    });
+
+    // Skills
+    const skillsLabel = qs('.skills__label');
+    if (skillsLabel) skillsLabel.textContent = t.skillsLabel;
+    const skillsHeading = qs('.skills__heading');
+    if (skillsHeading) skillsHeading.textContent = t.skillsHeading;
+
+    // Pricing
+    const pLabel = qs('.pricing__label');
+    if (pLabel) pLabel.textContent = t.pricingLabel;
+    const pHeading = qs('.pricing__heading');
+    if (pHeading) pHeading.textContent = t.pricingHeading;
+    const pSub = qs('.pricing__sub');
+    if (pSub) pSub.textContent = t.pricingSub;
+    const plans = qsa('.plan-card');
+    if (plans[0]) {
+      const tier = plans[0].querySelector('.plan-card__tier');
+      const period = plans[0].querySelector('.plan-card__period');
+      const feats = plans[0].querySelectorAll('.plan-card__features li');
+      const cta = plans[0].querySelector('.plan-card__cta');
+      if (tier) tier.textContent = t.tier0;
+      if (period) period.textContent = t.period0;
+      [t.feat00,t.feat01,t.feat02,t.feat03,t.feat04].forEach((f,i) => { if(feats[i]) feats[i].textContent=f; });
+      if (cta) cta.textContent = t.cta0;
+    }
+    if (plans[1]) {
+      const badge = plans[1].querySelector('.plan-card__badge');
+      const tier = plans[1].querySelector('.plan-card__tier');
+      const period = plans[1].querySelector('.plan-card__period');
+      const feats = plans[1].querySelectorAll('.plan-card__features li');
+      const cta = plans[1].querySelector('.plan-card__cta');
+      if (badge) badge.textContent = t.badge1;
+      if (tier) tier.textContent = t.tier1;
+      if (period) period.textContent = t.period1;
+      [t.feat10,t.feat11,t.feat12,t.feat13,t.feat14,t.feat15].forEach((f,i) => { if(feats[i]) feats[i].textContent=f; });
+      if (cta) cta.textContent = t.cta1;
+    }
+    if (plans[2]) {
+      const tier = plans[2].querySelector('.plan-card__tier');
+      const period = plans[2].querySelector('.plan-card__period');
+      const feats = plans[2].querySelectorAll('.plan-card__features li');
+      const cta = plans[2].querySelector('.plan-card__cta');
+      if (tier) tier.textContent = t.tier2;
+      if (period) period.textContent = t.period2;
+      [t.feat20,t.feat21,t.feat22,t.feat23,t.feat24].forEach((f,i) => { if(feats[i]) feats[i].textContent=f; });
+      if (cta) cta.textContent = t.cta2;
+    }
+
+    // Contact
+    const cLabel = qs('.contact__label');
+    if (cLabel) cLabel.textContent = t.contactLabel;
+    const cHeading = qs('.contact__heading');
+    if (cHeading) cHeading.textContent = t.contactHeading;
+    const cSub = qs('.contact__sub');
+    if (cSub) cSub.textContent = t.contactSub;
+    const lName = qs('label[for="name"]');
+    if (lName) lName.textContent = t.labelName;
+    const lEmail = qs('label[for="email"]');
+    if (lEmail) lEmail.textContent = t.labelEmail;
+    const lMsg = qs('label[for="message"]');
+    if (lMsg) lMsg.textContent = t.labelMessage;
+    const msgArea = qs('#message');
+    if (msgArea) msgArea.placeholder = t.placeholderMessage;
+    const submitSpan = qs('.form__submit span');
+    if (submitSpan) submitSpan.textContent = t.submitBtn;
+
+    // Footer
+    const footerSpans = qsa('footer span');
+    if (footerSpans[1]) footerSpans[1].textContent = t.footerBuilt;
+
+    // HTML lang attr + button states
+    document.documentElement.lang = lang === 'de' ? 'de' : 'en';
+    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+    document.getElementById('lang-de').classList.toggle('active', lang === 'de');
+
+    localStorage.setItem('lang', lang);
+  }
+
+  /* ---- Theme anwenden --------------------------------------- */
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    const btn = document.getElementById('theme-toggle');
+    if (btn) btn.textContent = theme === 'light' ? '🌙' : '☀️';
+    localStorage.setItem('theme', theme);
+  }
+
+  /* ---- Init: gespeicherte Werte laden ----------------------- */
+  const savedLang  = localStorage.getItem('lang')  || 'en';
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+
+  applyTheme(savedTheme);
+  applyTranslations(savedLang);
+
+  /* ---- Button Events --------------------------------------- */
+  document.getElementById('lang-en').addEventListener('click', () => applyTranslations('en'));
+  document.getElementById('lang-de').addEventListener('click', () => applyTranslations('de'));
+
+  document.getElementById('theme-toggle').addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+})();
+
