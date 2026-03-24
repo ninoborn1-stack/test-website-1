@@ -1123,6 +1123,16 @@ footer {
     order: -1;
   }
 
+  /* Value cards: 1 column on mobile */
+  .about__values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__val-card {
+    gap: 16px;
+    padding: 20px 16px;
+  }
+
   .work__grid {
     grid-template-columns: 1fr;
   }
@@ -1130,6 +1140,22 @@ footer {
   .skills__viz {
     width: 340px;
     height: 340px;
+  }
+
+  /* Pricing: 1 column, reduced padding, no overflow */
+  #pricing {
+    padding: var(--sp-6) var(--sp-3);
+    min-height: auto;
+    overflow: hidden;
+  }
+
+  .pricing__grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .plan-card--featured {
+    padding-top: 48px;
   }
 
   .dot-nav {
