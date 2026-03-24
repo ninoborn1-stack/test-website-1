@@ -4,7 +4,7 @@
  *   - Maus weg         → Partikel federn zurück zum Kopf
  */
 import * as THREE from 'three';
-import { GLTFLoader } from './GLTFLoader.js';
+import { GLTFLoader } from './GLTFLoader.js?v=2';
 
 (function initHeadScene() {
   const headCanvas = document.getElementById('about-canvas');
