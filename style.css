@@ -762,15 +762,20 @@ section {
   line-height: 1;
 }
 
-/* Three.js Partikel-Canvas für die Preiszahl */
-.price-canvas {
-  width: 100%;
-  height: 112px;
+.plan-card__price-val {
   display: block;
-  cursor: crosshair;
+  font-size: clamp(2.6rem, 4.5vw, 3.4rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  line-height: 1;
+  padding: 16px 0 8px;
 }
-.plan-card__price--text .price-canvas {
-  height: 92px;
+.plan-card__price-val--accent {
+  color: var(--accent);
+}
+.plan-card__price-val--talk {
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
 }
 
 .plan-card__period {

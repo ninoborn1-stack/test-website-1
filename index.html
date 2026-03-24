@@ -475,7 +475,7 @@
       <div class="plan-card" data-reveal>
         <p class="plan-card__tier">STARTER</p>
         <div class="plan-card__price">
-          <canvas class="price-canvas" data-text="€499" data-color="ffffff"></canvas>
+          <span class="plan-card__price-val">€499</span>
         </div>
         <p class="plan-card__period">one-time · 5 day delivery</p>
         <ul class="plan-card__features">
@@ -492,7 +492,7 @@
         <div class="plan-card__badge">MOST POPULAR</div>
         <p class="plan-card__tier">PROFESSIONAL</p>
         <div class="plan-card__price">
-          <canvas class="price-canvas" data-text="€1,200" data-color="c8f050"></canvas>
+          <span class="plan-card__price-val plan-card__price-val--accent">€1,200</span>
         </div>
         <p class="plan-card__period">one-time · 10 day delivery</p>
         <ul class="plan-card__features">
@@ -508,8 +508,8 @@
 
       <div class="plan-card" data-reveal>
         <p class="plan-card__tier">CUSTOM</p>
-        <div class="plan-card__price plan-card__price--text">
-          <canvas class="price-canvas" data-text="Let's talk" data-color="ffffff"></canvas>
+        <div class="plan-card__price">
+          <span class="plan-card__price-val plan-card__price-val--talk" data-i18n="price2">Let's talk</span>
         </div>
         <p class="plan-card__period">scoped to your project</p>
         <ul class="plan-card__features">
@@ -608,7 +608,7 @@
   </div>
 
   <!-- main.js am Ende — damit das DOM schon geladen ist wenn JS läuft -->
-  <script type="module" src="main.js?v=31"></script>
+  <script type="module" src="main.js?v=32"></script>
 
   <!-- head-scene.js als ES Module (nutzt Import Map für 'three') -->
   <script type="module" src="head-scene.js?v=14"></script>

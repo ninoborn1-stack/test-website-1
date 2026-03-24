@@ -614,123 +614,7 @@ document.querySelectorAll('[data-reveal]').forEach((el, i) => {
 })();
 
 
-/* ============================================================
-   10. PRICING — Partikel-Zahlen wie der Kopf in About
-   Text → 2D Canvas Sampling → Three.js Points + Spring-Physik
-   ============================================================ */
-(function() {
-  const SW = 560, SH = 140; // Sampling-Canvas Größe
-
-  function sampleText(text) {
-    const oc  = document.createElement('canvas');
-    oc.width  = SW; oc.height = SH;
-    const ctx = oc.getContext('2d');
-    const fs  = text.length > 6 ? SH * 0.58 : SH * 0.78;
-    ctx.fillStyle = '#fff';
-    ctx.font = `900 ${fs}px monospace`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(text, SW / 2, SH / 2);
-    const data = ctx.getImageData(0, 0, SW, SH).data;
-    const pts  = [];
-    const STEP = 2;
-    for (let y = 0; y < SH; y += STEP) {
-      for (let x = 0; x < SW; x += STEP) {
-        if (data[(y * SW + x) * 4 + 3] > 120) {
-          pts.push([
-            (x / SW - 0.5) * 8,
-            (0.5 - y / SH) * 2,
-            (Math.random() - 0.5) * 0.12
-          ]);
-        }
-      }
-    }
-    return pts;
-  }
-
-  function initCanvas(cvs) {
-    const W = cvs.clientWidth  || 300;
-    const H = cvs.clientHeight || 88;
-    const aspect = W / H;
-    const fH = 1.15; // frustum half-height
-
-    const scene = new THREE.Scene();
-    const cam   = new THREE.OrthographicCamera(
-      -fH * aspect, fH * aspect, fH, -fH, 0.1, 10
-    );
-    cam.position.z = 5;
-
-    const rdr = new THREE.WebGLRenderer({ canvas: cvs, antialias: true, alpha: true });
-    rdr.setPixelRatio(Math.min(devicePixelRatio, 2));
-    rdr.setSize(W, H);
-
-    const text  = cvs.dataset.text;
-    const color = new THREE.Color('#' + cvs.dataset.color);
-    const pts   = sampleText(text);
-    const N     = pts.length;
-
-    const orig = new Float32Array(N * 3);
-    const cur  = new Float32Array(N * 3);
-    const vel  = new Float32Array(N * 3);
-
-    pts.forEach(([x, y, z], i) => {
-      orig[i*3]=x; orig[i*3+1]=y; orig[i*3+2]=z;
-      /* Start: verstreut wie beim Kopf */
-      cur[i*3]   = (Math.random() - 0.5) * 7;
-      cur[i*3+1] = (Math.random() - 0.5) * 2.5;
-      cur[i*3+2] = (Math.random() - 0.5) * 2;
-    });
-
-    const geo = new THREE.BufferGeometry();
-    geo.setAttribute('position', new THREE.BufferAttribute(cur, 3));
-    const mat = new THREE.PointsMaterial({ color, size: 0.052, sizeAttenuation: true, transparent: true, opacity: 0.92 });
-    scene.add(new THREE.Points(geo, mat));
-
-    /* Hover-Repulsion */
-    let hovX = 0, hovY = 0, hovered = false;
-    const card = cvs.closest('.plan-card');
-    card.addEventListener('mousemove', e => {
-      const r = cvs.getBoundingClientRect();
-      hovX = ((e.clientX - r.left) / r.width  - 0.5) * fH * aspect * 2;
-      hovY = (0.5 - (e.clientY - r.top)  / r.height) * fH * 2;
-      hovered = true;
-    });
-    card.addEventListener('mouseleave', () => { hovered = false; });
-
-    const k = 0.042, damp = 0.865;
-
-    (function loop() {
-      requestAnimationFrame(loop);
-      for (let i = 0; i < N; i++) {
-        const ix = i*3, iy = ix+1, iz = ix+2;
-        if (hovered) {
-          const dx = cur[ix] - hovX, dy = cur[iy] - hovY;
-          const d  = Math.sqrt(dx*dx + dy*dy);
-          if (d < 1.4 && d > 0.001) {
-            const f = (1.4 - d) / 1.4 * 0.11;
-            vel[ix] += dx/d * f; vel[iy] += dy/d * f;
-          }
-        }
-        vel[ix] += (orig[ix] - cur[ix]) * k;
-        vel[iy] += (orig[iy] - cur[iy]) * k;
-        vel[iz] += (orig[iz] - cur[iz]) * k * 0.4;
-        vel[ix] *= damp; vel[iy] *= damp; vel[iz] *= damp;
-        cur[ix] += vel[ix]; cur[iy] += vel[iy]; cur[iz] += vel[iz];
-      }
-      geo.attributes.position.needsUpdate = true;
-      rdr.render(scene, cam);
-    })();
-  }
-
-  ScrollTrigger.create({
-    trigger: '#pricing',
-    start: 'top 70%',
-    once: true,
-    onEnter() {
-      document.querySelectorAll('.price-canvas').forEach(cvs => initCanvas(cvs));
-    }
-  });
-})();
+/* 10. PRICING — plain text prices (canvas animations removed) */
 
 /* ============================================================
    10. CONTACT FORM
@@ -829,6 +713,7 @@ window.addEventListener('resize', () => {
       feat20: 'Web apps & dashboards', feat21: 'Python automation & APIs',
       feat22: 'WooCommerce / e-commerce', feat23: 'Ongoing retainer possible',
       feat24: 'Milestone-based billing',
+      price2: "Let's talk",
       cta2: 'Request quote',
       contactLabel:       'Contact',
       contactHeading:     "Let's build something.",
@@ -889,6 +774,7 @@ window.addEventListener('resize', () => {
       feat20: 'Web-Apps & Dashboards', feat21: 'Python-Automation & APIs',
       feat22: 'WooCommerce / E-Commerce', feat23: 'Laufendes Retainer möglich',
       feat24: 'Meilenstein-basierte Abrechnung',
+      price2: 'Auf Anfrage',
       cta2: 'Angebot anfragen',
       contactLabel:       'Kontakt',
       contactHeading:     'Lass uns etwas bauen.',
@@ -1005,8 +891,10 @@ window.addEventListener('resize', () => {
       const period = plans[2].querySelector('.plan-card__period');
       const feats = plans[2].querySelectorAll('.plan-card__features li');
       const cta = plans[2].querySelector('.plan-card__cta');
+      const price2El = plans[2].querySelector('.plan-card__price-val--talk');
       if (tier) tier.textContent = t.tier2;
       if (period) period.textContent = t.period2;
+      if (price2El) price2El.textContent = t.price2;
       [t.feat20,t.feat21,t.feat22,t.feat23,t.feat24].forEach((f,i) => { if(feats[i]) feats[i].textContent=f; });
       if (cta) cta.textContent = t.cta2;
     }
