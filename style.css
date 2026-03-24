@@ -1138,8 +1138,12 @@ footer {
   }
 
   .skills__viz {
-    width: 340px;
-    height: 340px;
+    width: 100%;
+    height: auto;
+  }
+
+  #skills {
+    overflow: hidden;
   }
 
   /* Pricing: 1 column, reduced padding, no overflow */
