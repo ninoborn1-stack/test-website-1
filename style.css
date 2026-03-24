@@ -732,6 +732,9 @@ section {
   background: #0f110c;
   padding-top: 48px;
 }
+[data-theme="light"] .plan-card--featured {
+  background: #dfe0d8;
+}
 .plan-card--featured:hover { border-color: rgba(200,240,80,.8); }
 
 .plan-card__badge {
