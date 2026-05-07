@@ -670,18 +670,18 @@ window.addEventListener('resize', () => {
       heroScroll:       'scroll',
       workLabel:        'Portfolio',
       workHeading:      'Selected Work',
-      proj0cat:         'SAAS LANDING PAGE',
-      proj0title:       'Interactive SaaS Landing Page',
-      proj0desc:        'Full animated landing page with interactive 3D hero, pricing section and smooth page transitions.',
-      proj1cat:         'MOTION WEBSITE',
-      proj1title:       'Motion Portfolio',
-      proj1desc:        'Personal portfolio with physics-based animations, custom cursor and particle effects.',
-      proj2cat:         'WEB APPLICATION',
-      proj2title:       'E-Commerce Dashboard',
-      proj2desc:        'Admin dashboard with real-time data visualization, inventory management and order tracking.',
-      proj3cat:         'MULTI-PAGE WEBSITE',
-      proj3title:       'Full Business Website',
-      proj3desc:        'Complete business presence with smooth animations, CMS integration and mobile-first responsive design.',
+      proj0cat:         'ONLINE SCHOOL / CODING',
+      proj0title:       'PyCoBase',
+      proj0desc:        'Free online learning platform for Python. Interactive lessons, live editor and structured courses — free for everyone.',
+      proj1cat:         'SAAS / LANDING PAGE',
+      proj1title:       'Aufstiegscode',
+      proj1desc:        'Landing page for a non-fiction book. Conversion-optimised, animated, with a direct purchase flow.',
+      proj2cat:         'TECH STARTUP / HOMEPAGE',
+      proj2title:       'creativate',
+      proj2desc:        'Homepage for a tech company. Clear branding, animated hero, modern structure — built for a strong first impression.',
+      proj3cat:         'FASHION / E-COMMERCE',
+      proj3title:       'Kleidungsmarke',
+      proj3desc:        'Landing page for a clothing brand. Product grid, animated hero section, mobile-optimised. Link coming soon.',
       aboutLabel:       'About',
       aboutHeading:     'Building at the intersection of<br />design &amp; engineering.',
       aboutText0:       "I'm a creative developer based in Switzerland, focused on crafting digital experiences that combine precise engineering with considered visual design.",
@@ -715,6 +715,9 @@ window.addEventListener('resize', () => {
       feat24: 'Milestone-based billing',
       price2: "Let's talk",
       cta2: 'Request quote',
+      quoteLabel:         'Statement',
+      quoteHeading:       'In my own words.',
+      quoteText:          'Self-taught developer with an entrepreneurial background and a clear focus on working solutions. I have independently built web applications, AI-powered tools and digital products — not as exercises, but with the intent to actually deploy them and create concrete value. My path from a trade apprenticeship through founding and successfully running a restaurant to software development was not linear, but it shaped me: I see things through, take responsibility, and get up to speed quickly on new topics on my own. This foundation is something I now want to deepen and build on through professional training as an application developer.',
       contactLabel:       'Contact',
       contactHeading:     "Let's build something.",
       contactSub:         'Available for freelance projects, collaborations, and full-time roles.',
@@ -731,18 +734,18 @@ window.addEventListener('resize', () => {
       heroScroll:       'scrollen',
       workLabel:        'Portfolio',
       workHeading:      'Ausgewählte Arbeiten',
-      proj0cat:         'SAAS LANDINGPAGE',
-      proj0title:       'Interaktive SaaS Landingpage',
-      proj0desc:        'Vollständig animierte Landingpage mit interaktivem 3D-Hero, Preisbereich und sanften Seitenübergängen.',
-      proj1cat:         'MOTION WEBSITE',
-      proj1title:       'Motion Portfolio',
-      proj1desc:        'Persönliches Portfolio mit physikbasierten Animationen, eigenem Cursor und Partikeleffekten.',
-      proj2cat:         'WEBANWENDUNG',
-      proj2title:       'E-Commerce Dashboard',
-      proj2desc:        'Admin-Dashboard mit Echtzeit-Datenvisualisierung, Lagerverwaltung und Bestellverfolgung.',
-      proj3cat:         'MEHRSEITIGE WEBSITE',
-      proj3title:       'Business-Website',
-      proj3desc:        'Vollständiger Unternehmensauftritt mit flüssigen Animationen, CMS-Integration und mobilem Design.',
+      proj0cat:         'ONLINE SCHULE / CODING',
+      proj0title:       'PyCoBase',
+      proj0desc:        'Kostenlose Online-Lernplattform für Python. Interaktive Lektionen, Live-Editor und strukturierte Kurse — gratis für alle.',
+      proj1cat:         'SAAS / LANDINGPAGE',
+      proj1title:       'Aufstiegscode',
+      proj1desc:        'Landingpage für ein Fachbuch. Conversion-optimiert, animiert, mit direktem Kaufprozess.',
+      proj2cat:         'TECH STARTUP / HOMEPAGE',
+      proj2title:       'creativate',
+      proj2desc:        'Startseite für eine Tech-Firma. Klares Branding, animierter Hero, moderne Struktur.',
+      proj3cat:         'FASHION / E-COMMERCE',
+      proj3title:       'Kleidungsmarke',
+      proj3desc:        'Landingpage für eine Kleidungsfirma. Produktgrid, animierte Hero-Sektion, mobil-optimiert. Link folgt.',
       aboutLabel:       'Über mich',
       aboutHeading:     'An der Schnittstelle von<br />Design &amp; Entwicklung.',
       aboutText0:       'Ich bin ein kreativer Entwickler aus der Schweiz, der digitale Erlebnisse erschafft, die präzise Technik mit durchdachtem visuellem Design verbinden.',
@@ -776,6 +779,9 @@ window.addEventListener('resize', () => {
       feat24: 'Meilenstein-basierte Abrechnung',
       price2: 'Auf Anfrage',
       cta2: 'Angebot anfragen',
+      quoteLabel:         'Statement',
+      quoteHeading:       'In eigenen Worten.',
+      quoteText:          'Autodidaktischer Entwickler mit unternehmerischem Hintergrund und einem klaren Fokus auf funktionierende Lösungen. Ich habe eigenständig Webanwendungen, KI-gestützte Tools und digitale Produkte entwickelt – nicht als Übung, sondern mit dem Anspruch, sie tatsächlich einzusetzen und einen konkreten Nutzen zu schaffen. Mein Weg von der handwerklichen Ausbildung über die Gründung und erfolgreiche Führung eines Restaurants bis hin zur Softwareentwicklung war nicht geradlinig, hat mich aber geprägt: Ich bringe Projekte zu Ende, übernehme Verantwortung und arbeite mich schnell und selbstständig in neue Themen ein. Dieses Fundament möchte ich nun durch eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung gezielt vertiefen und weiter ausbauen.',
       contactLabel:       'Kontakt',
       contactHeading:     'Lass uns etwas bauen.',
       contactSub:         'Verfügbar für Freelance-Projekte, Kooperationen und Festanstellungen.',
@@ -856,48 +862,13 @@ window.addEventListener('resize', () => {
     const skillsHeading = qs('.skills__heading');
     if (skillsHeading) skillsHeading.textContent = t.skillsHeading;
 
-    // Pricing
-    const pLabel = qs('.pricing__label');
-    if (pLabel) pLabel.textContent = t.pricingLabel;
-    const pHeading = qs('.pricing__heading');
-    if (pHeading) pHeading.textContent = t.pricingHeading;
-    const pSub = qs('.pricing__sub');
-    if (pSub) pSub.textContent = t.pricingSub;
-    const plans = qsa('.plan-card');
-    if (plans[0]) {
-      const tier = plans[0].querySelector('.plan-card__tier');
-      const period = plans[0].querySelector('.plan-card__period');
-      const feats = plans[0].querySelectorAll('.plan-card__features li');
-      const cta = plans[0].querySelector('.plan-card__cta');
-      if (tier) tier.textContent = t.tier0;
-      if (period) period.textContent = t.period0;
-      [t.feat00,t.feat01,t.feat02,t.feat03,t.feat04].forEach((f,i) => { if(feats[i]) feats[i].textContent=f; });
-      if (cta) cta.textContent = t.cta0;
-    }
-    if (plans[1]) {
-      const badge = plans[1].querySelector('.plan-card__badge');
-      const tier = plans[1].querySelector('.plan-card__tier');
-      const period = plans[1].querySelector('.plan-card__period');
-      const feats = plans[1].querySelectorAll('.plan-card__features li');
-      const cta = plans[1].querySelector('.plan-card__cta');
-      if (badge) badge.textContent = t.badge1;
-      if (tier) tier.textContent = t.tier1;
-      if (period) period.textContent = t.period1;
-      [t.feat10,t.feat11,t.feat12,t.feat13,t.feat14,t.feat15].forEach((f,i) => { if(feats[i]) feats[i].textContent=f; });
-      if (cta) cta.textContent = t.cta1;
-    }
-    if (plans[2]) {
-      const tier = plans[2].querySelector('.plan-card__tier');
-      const period = plans[2].querySelector('.plan-card__period');
-      const feats = plans[2].querySelectorAll('.plan-card__features li');
-      const cta = plans[2].querySelector('.plan-card__cta');
-      const price2El = plans[2].querySelector('.plan-card__price-val--talk');
-      if (tier) tier.textContent = t.tier2;
-      if (period) period.textContent = t.period2;
-      if (price2El) price2El.textContent = t.price2;
-      [t.feat20,t.feat21,t.feat22,t.feat23,t.feat24].forEach((f,i) => { if(feats[i]) feats[i].textContent=f; });
-      if (cta) cta.textContent = t.cta2;
-    }
+    // Quote
+    const qLabel = qs('.quote__label');
+    if (qLabel) qLabel.textContent = t.quoteLabel;
+    const qHeading = qs('.quote__heading');
+    if (qHeading) qHeading.textContent = t.quoteHeading;
+    const qText = qs('.quote__text');
+    if (qText) qText.textContent = t.quoteText;
 
     // Contact
     const cLabel = qs('.contact__label');

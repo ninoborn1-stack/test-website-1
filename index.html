@@ -27,7 +27,7 @@
   <!-- ScrollTrigger: GSAP-Plugin das Animationen an den Scroll koppelt -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-  <link rel="stylesheet" href="style.css?v=10" />
+  <link rel="stylesheet" href="style.css?v=14" />
 </head>
 <body>
 
@@ -73,7 +73,7 @@
 
   <!-- ============================================================
        SEKTION 4: WORK
-       Vier Projekt-Cards. Mouse-Tracking Glow-Effekt.
+       Vier Projekt-Cards. Alle direkt verlinkt.
        ============================================================ -->
   <section id="work">
     <div class="work__header" data-reveal>
@@ -83,280 +83,281 @@
 
     <div class="work__grid">
 
-      <!-- 01 SAAS LANDING PAGE -->
-      <article class="project-card" data-reveal>
-        <div class="project-card__visual">
-          <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <style>
-              .c1-h1{transform-box:fill-box;transform-origin:0% 50%;animation:c1-bar 5s 0.2s ease infinite}
-              .c1-h2{transform-box:fill-box;transform-origin:0% 50%;animation:c1-bar 5s 0.45s ease infinite}
-              .c1-sub{animation:c1-fade 5s 0.7s ease infinite}
-              .c1-sub2{animation:c1-fade 5s 0.85s ease infinite}
-              .c1-btn{animation:c1-pop 5s 1.0s ease infinite}
-              .c1-f1{animation:c1-card 5s 1.3s ease infinite}
-              .c1-f2{animation:c1-card 5s 1.5s ease infinite}
-              .c1-f3{animation:c1-card 5s 1.7s ease infinite}
-              .c1-glow{animation:c1-pulse 2.5s 2s ease-in-out infinite}
-              @keyframes c1-bar{0%,4%{transform:scaleX(0);opacity:0}30%,72%{transform:scaleX(1);opacity:1}94%,100%{transform:scaleX(0);opacity:0}}
-              @keyframes c1-fade{0%,12%{opacity:0;transform:translateY(5px)}35%,72%{opacity:1;transform:translateY(0)}94%,100%{opacity:0}}
-              @keyframes c1-pop{0%,18%{opacity:0;transform:scale(.88)}38%,72%{opacity:1;transform:scale(1)}94%,100%{opacity:0}}
-              @keyframes c1-card{0%,24%{opacity:0;transform:translateY(9px)}44%,72%{opacity:1;transform:translateY(0)}94%,100%{opacity:0}}
-              @keyframes c1-pulse{0%,100%{filter:drop-shadow(0 0 5px rgba(200,240,80,.45))}50%{filter:drop-shadow(0 0 16px rgba(200,240,80,.9))}}
-            </style>
-            <rect width="480" height="280" fill="#0d0d0d"/>
-            <!-- Chrome -->
-            <rect width="480" height="34" fill="#141414"/>
-            <circle cx="18" cy="17" r="5" fill="#2a2a2a"/><circle cx="34" cy="17" r="5" fill="#2a2a2a"/><circle cx="50" cy="17" r="5" fill="#2a2a2a"/>
-            <rect x="68" y="9" width="220" height="16" rx="3" fill="#1a1a1a"/>
-            <text x="82" y="21" font-size="9" font-family="monospace" fill="#383838">saas-product.io</text>
-            <rect y="34" width="480" height="1" fill="#1e1e1e"/>
-            <!-- Nav -->
-            <text x="24" y="58" font-size="13" font-weight="bold" font-family="monospace" fill="#c8f050">NB.</text>
-            <text x="330" y="57" font-size="9" font-family="monospace" fill="#3a3a3a">Features</text>
-            <text x="386" y="57" font-size="9" font-family="monospace" fill="#3a3a3a">Pricing</text>
-            <rect x="422" y="47" width="42" height="17" rx="3" fill="#c8f050"/>
-            <text x="443" y="59.5" font-size="8" font-family="monospace" fill="#0a0a0a" text-anchor="middle" font-weight="bold">Log in</text>
-            <rect y="68" width="480" height="1" fill="#1a1a1a"/>
-            <!-- Headlines -->
-            <rect x="28" y="88" width="230" height="13" rx="2" fill="#dedede" class="c1-h1"/>
-            <rect x="28" y="108" width="168" height="13" rx="2" fill="#c8f050" class="c1-h2"/>
-            <!-- Subtext -->
-            <rect x="28" y="133" width="288" height="7" rx="1" fill="#2a2a2a" class="c1-sub"/>
-            <rect x="28" y="145" width="228" height="7" rx="1" fill="#222" class="c1-sub2"/>
-            <!-- CTA -->
-            <g class="c1-btn">
-              <rect x="28" y="162" width="112" height="28" rx="4" fill="#c8f050" class="c1-glow"/>
-              <text x="84" y="180" font-size="10" font-family="monospace" fill="#0a0a0a" text-anchor="middle" font-weight="bold">Get Started →</text>
-            </g>
-            <!-- Feature cards -->
-            <g class="c1-f1"><rect x="28" y="205" width="128" height="56" rx="4" fill="#141414"/><rect x="40" y="218" width="30" height="4" rx="1" fill="#c8f050" opacity=".8"/><rect x="40" y="228" width="98" height="3" rx="1" fill="#222"/><rect x="40" y="236" width="76" height="3" rx="1" fill="#1e1e1e"/></g>
-            <g class="c1-f2"><rect x="172" y="205" width="128" height="56" rx="4" fill="#141414"/><rect x="184" y="218" width="30" height="4" rx="1" fill="#c8f050" opacity=".8"/><rect x="184" y="228" width="98" height="3" rx="1" fill="#222"/><rect x="184" y="236" width="76" height="3" rx="1" fill="#1e1e1e"/></g>
-            <g class="c1-f3"><rect x="316" y="205" width="136" height="56" rx="4" fill="#141414"/><rect x="328" y="218" width="30" height="4" rx="1" fill="#c8f050" opacity=".8"/><rect x="328" y="228" width="98" height="3" rx="1" fill="#222"/><rect x="328" y="236" width="76" height="3" rx="1" fill="#1e1e1e"/></g>
-            <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0d0d" stop-opacity="0"/><stop offset="1" stop-color="#0d0d0d" stop-opacity=".6"/></linearGradient></defs>
-            <rect width="480" height="280" fill="url(#g1)"/>
-          </svg>
-        </div>
-        <div class="project-card__info">
-          <span class="project-card__cat">SAAS / LANDING PAGE</span>
-          <h3 class="project-card__title">SaaS Product Landing Page</h3>
-          <p class="project-card__desc">A modern, animated landing page for a fictional SaaS product. Hero, features, pricing, CTA — built to convert.</p>
-          <div class="project-card__meta">
-            <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">GSAP</span></div>
-            <span class="project-card__arrow">↗</span>
+      <!-- 01 PYCOBASE -->
+      <a href="https://pycobase.com" target="_blank" rel="noopener" class="project-card-link">
+        <article class="project-card" data-reveal>
+          <div class="project-card__visual">
+            <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <style>
+                .pc-l1{transform-box:fill-box;transform-origin:left;animation:pc-bar 7s .3s ease infinite}
+                .pc-l2{transform-box:fill-box;transform-origin:left;animation:pc-bar 7s .6s ease infinite}
+                .pc-l3{transform-box:fill-box;transform-origin:left;animation:pc-bar 7s .9s ease infinite}
+                .pc-l4{transform-box:fill-box;transform-origin:left;animation:pc-bar 7s 1.2s ease infinite}
+                .pc-l5{transform-box:fill-box;transform-origin:left;animation:pc-bar 7s 1.5s ease infinite}
+                .pc-cur{animation:pc-blink 1s ease-in-out infinite}
+                .pc-out{animation:pc-fade 7s 2.4s ease infinite}
+                .pc-ok{animation:pc-fade 7s 3.0s ease infinite}
+                @keyframes pc-bar{0%,4%{transform:scaleX(0);opacity:0}28%,72%{transform:scaleX(1);opacity:1}92%,100%{transform:scaleX(0);opacity:0}}
+                @keyframes pc-blink{0%,100%{opacity:1}50%{opacity:0}}
+                @keyframes pc-fade{0%,34%{opacity:0;transform:translateY(4px)}50%,78%{opacity:1;transform:translateY(0)}92%,100%{opacity:0}}
+              </style>
+              <rect width="480" height="280" fill="#0d0d0d"/>
+              <rect width="480" height="34" fill="#141414"/>
+              <circle cx="18" cy="17" r="5" fill="#2a2a2a"/><circle cx="34" cy="17" r="5" fill="#2a2a2a"/><circle cx="50" cy="17" r="5" fill="#2a2a2a"/>
+              <rect x="70" y="7" width="130" height="20" rx="3" fill="#1a1a1a"/>
+              <text x="84" y="21" font-size="9" font-family="monospace" fill="#c8f050">lesson_01.py</text>
+              <rect y="34" width="480" height="1" fill="#1e1e1e"/>
+              <!-- Sidebar -->
+              <rect x="0" y="35" width="112" height="245" fill="#111"/>
+              <rect x="112" y="35" width="1" height="245" fill="#1a1a1a"/>
+              <text x="10" y="56" font-size="8" font-family="monospace" fill="#444" letter-spacing=".1em">PYCOBASE</text>
+              <rect x="8" y="63" width="96" height="16" rx="2" fill="#c8f050" fill-opacity=".08"/>
+              <text x="16" y="75" font-size="9" font-family="monospace" fill="#888">lesson_01.py</text>
+              <text x="16" y="93" font-size="9" font-family="monospace" fill="#3a3a3a">lesson_02.py</text>
+              <text x="16" y="110" font-size="9" font-family="monospace" fill="#3a3a3a">basics.py</text>
+              <text x="16" y="127" font-size="9" font-family="monospace" fill="#3a3a3a">functions.py</text>
+              <!-- Line numbers -->
+              <text x="122" y="60" font-size="9" font-family="monospace" fill="#333" text-anchor="end">1</text>
+              <text x="122" y="80" font-size="9" font-family="monospace" fill="#333" text-anchor="end">2</text>
+              <text x="122" y="100" font-size="9" font-family="monospace" fill="#333" text-anchor="end">3</text>
+              <text x="122" y="120" font-size="9" font-family="monospace" fill="#333" text-anchor="end">4</text>
+              <text x="122" y="140" font-size="9" font-family="monospace" fill="#333" text-anchor="end">5</text>
+              <!-- Code lines -->
+              <rect x="130" y="51" width="220" height="10" rx="1" fill="#4a6a3a" fill-opacity=".7" class="pc-l1"/>
+              <rect x="130" y="71" width="160" height="10" rx="1" fill="#5a8ad0" fill-opacity=".55" class="pc-l2"/>
+              <rect x="130" y="91" width="100" height="10" rx="1" fill="#5a8ad0" fill-opacity=".55" class="pc-l3"/>
+              <rect x="130" y="111" width="210" height="10" rx="1" fill="#ddaa50" fill-opacity=".55" class="pc-l4"/>
+              <rect x="130" y="131" width="270" height="10" rx="1" fill="#888" fill-opacity=".3" class="pc-l5"/>
+              <rect x="130" y="149" width="6" height="13" fill="#c8f050" fill-opacity=".8" class="pc-cur"/>
+              <!-- Terminal -->
+              <rect y="198" width="480" height="1" fill="#1e1e1e"/>
+              <rect y="199" width="480" height="81" fill="#0a0a0a"/>
+              <text x="12" y="216" font-size="8" font-family="monospace" fill="#333" letter-spacing=".1em">TERMINAL</text>
+              <g class="pc-out">
+                <text x="12" y="234" font-size="10" font-family="monospace" fill="#4a8a3a">$ python lesson_01.py</text>
+                <text x="12" y="252" font-size="10" font-family="monospace" fill="#e0e0e0">Hallo, PyCoBase!</text>
+              </g>
+              <g class="pc-ok">
+                <text x="12" y="270" font-size="10" font-family="monospace" fill="#c8f050">✓ Lektion abgeschlossen → Lektion 2</text>
+              </g>
+            </svg>
           </div>
-        </div>
-      </article>
-
-      <!-- 02 BOOKING APP -->
-      <article class="project-card" data-reveal>
-        <div class="project-card__visual">
-          <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <style>
-              .c2-sel{animation:c2-move 7s ease-in-out infinite}
-              .c2-s1{animation:c2-slot 7s .6s ease infinite}
-              .c2-s2{animation:c2-slot 7s .75s ease infinite}
-              .c2-s3{animation:c2-slot 7s .9s ease infinite}
-              .c2-ok{animation:c2-check 7s 1.6s ease infinite}
-              @keyframes c2-move{
-                0%{transform:translate(0px,0px)}14%{transform:translate(36px,0px)}
-                28%{transform:translate(72px,0px)}42%{transform:translate(72px,32px)}
-                57%{transform:translate(36px,32px)}71%{transform:translate(0px,64px)}
-                85%,100%{transform:translate(0px,0px)}}
-              @keyframes c2-slot{0%,28%{opacity:0;transform:translateX(-10px)}48%,80%{opacity:1;transform:translateX(0)}96%,100%{opacity:0}}
-              @keyframes c2-check{0%,44%{opacity:0;transform:scale(0)}62%,82%{opacity:1;transform:scale(1)}96%,100%{opacity:0;transform:scale(0)}}
-            </style>
-            <rect width="480" height="280" fill="#0d0d0d"/>
-            <!-- Header -->
-            <rect width="480" height="46" fill="#141414"/>
-            <text x="24" y="29" font-size="13" font-weight="bold" font-family="sans-serif" fill="#e0e0e0">Book a Slot</text>
-            <rect y="46" width="480" height="1" fill="#1e1e1e"/>
-            <!-- Month -->
-            <text x="24" y="74" font-size="14" font-weight="bold" font-family="sans-serif" fill="#e0e0e0">March 2025</text>
-            <text x="434" y="75" font-size="17" fill="#3a3a3a" font-family="monospace">‹ ›</text>
-            <!-- Day headers -->
-            <text x="30" y="94" font-size="9" font-family="monospace" fill="#444">Mo</text><text x="66" y="94" font-size="9" font-family="monospace" fill="#444">Tu</text>
-            <text x="102" y="94" font-size="9" font-family="monospace" fill="#444">We</text><text x="138" y="94" font-size="9" font-family="monospace" fill="#444">Th</text>
-            <text x="174" y="94" font-size="9" font-family="monospace" fill="#444">Fr</text><text x="210" y="94" font-size="9" font-family="monospace" fill="#333">Sa</text>
-            <text x="246" y="94" font-size="9" font-family="monospace" fill="#333">Su</text>
-            <!-- Row 1 -->
-            <text x="30" y="117" font-size="11" font-family="monospace" fill="#666">3</text><text x="66" y="117" font-size="11" font-family="monospace" fill="#666">4</text>
-            <text x="102" y="117" font-size="11" font-family="monospace" fill="#666">5</text><text x="138" y="117" font-size="11" font-family="monospace" fill="#666">6</text>
-            <text x="174" y="117" font-size="11" font-family="monospace" fill="#666">7</text><text x="210" y="117" font-size="11" font-family="monospace" fill="#444">8</text>
-            <text x="246" y="117" font-size="11" font-family="monospace" fill="#444">9</text>
-            <!-- Row 2 -->
-            <text x="28" y="149" font-size="11" font-family="monospace" fill="#666">10</text><text x="64" y="149" font-size="11" font-family="monospace" fill="#666">11</text>
-            <text x="100" y="149" font-size="11" font-family="monospace" fill="#666">12</text><text x="136" y="149" font-size="11" font-family="monospace" fill="#666">13</text>
-            <text x="172" y="149" font-size="11" font-family="monospace" fill="#666">14</text><text x="208" y="149" font-size="11" font-family="monospace" fill="#444">15</text>
-            <text x="244" y="149" font-size="11" font-family="monospace" fill="#444">16</text>
-            <!-- Row 3 -->
-            <text x="28" y="181" font-size="11" font-family="monospace" fill="#666">17</text><text x="64" y="181" font-size="11" font-family="monospace" fill="#666">18</text>
-            <text x="100" y="181" font-size="11" font-family="monospace" fill="#666">19</text><text x="136" y="181" font-size="11" font-family="monospace" fill="#666">20</text>
-            <text x="172" y="181" font-size="11" font-family="monospace" fill="#666">21</text>
-            <!-- Selector -->
-            <circle cx="36" cy="112" r="13" fill="#c8f050" fill-opacity=".15" class="c2-sel"/>
-            <circle cx="36" cy="112" r="13" fill="none" stroke="#c8f050" stroke-width="1.5" class="c2-sel"/>
-            <!-- Divider -->
-            <rect y="198" width="480" height="1" fill="#1e1e1e"/>
-            <text x="24" y="220" font-size="10" font-family="monospace" fill="#444">Available times:</text>
-            <!-- Slots -->
-            <g class="c2-s1"><rect x="24" y="230" width="68" height="26" rx="4" fill="#1a1a1a" stroke="#c8f050" stroke-width="1"/><text x="58" y="247" font-size="10" font-family="monospace" fill="#c8f050" text-anchor="middle">09:00</text></g>
-            <g class="c2-s2"><rect x="104" y="230" width="68" height="26" rx="4" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/><text x="138" y="247" font-size="10" font-family="monospace" fill="#555" text-anchor="middle">10:30</text></g>
-            <g class="c2-s3"><rect x="184" y="230" width="68" height="26" rx="4" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/><text x="218" y="247" font-size="10" font-family="monospace" fill="#555" text-anchor="middle">14:00</text></g>
-            <!-- Confirm -->
-            <g class="c2-ok"><circle cx="420" cy="243" r="17" fill="#c8f050"/><text x="420" y="250" font-size="17" fill="#0a0a0a" text-anchor="middle">✓</text></g>
-          </svg>
-        </div>
-        <div class="project-card__info">
-          <span class="project-card__cat">WEB APP / UX</span>
-          <h3 class="project-card__title">Booking App</h3>
-          <p class="project-card__desc">A clean appointment booking tool. Date picker, time slots, confirmation flow — full UX from start to finish.</p>
-          <div class="project-card__meta">
-            <div class="project-card__tags"><span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MySQL</span></div>
-            <span class="project-card__arrow">↗</span>
+          <div class="project-card__info">
+            <span class="project-card__cat">ONLINE SCHULE / CODING</span>
+            <h3 class="project-card__title">PyCoBase</h3>
+            <p class="project-card__desc">Kostenlose Online-Lernplattform für Python. Interaktive Lektionen, Live-Editor und strukturierte Kurse — gratis für alle.</p>
+            <div class="project-card__meta">
+              <div class="project-card__tags"><span class="tag">Python</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+              <span class="project-card__arrow">↗</span>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </a>
 
-      <!-- 03 ANALYTICS DASHBOARD -->
-      <article class="project-card" data-reveal>
+      <!-- 02 AUFSTIEGSCODE -->
+      <a href="https://aufstiegscode.de" target="_blank" rel="noopener" class="project-card-link">
+        <article class="project-card" data-reveal>
+          <div class="project-card__visual">
+            <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <style>
+                .as-h1{transform-box:fill-box;transform-origin:0% 50%;animation:as-bar 6s .3s ease infinite}
+                .as-h2{transform-box:fill-box;transform-origin:0% 50%;animation:as-bar 6s .55s ease infinite}
+                .as-h3{transform-box:fill-box;transform-origin:0% 50%;animation:as-bar 6s .78s ease infinite}
+                .as-sub{animation:as-fade 6s .9s ease infinite}
+                .as-btn{animation:as-pop 6s 1.15s ease infinite}
+                .as-book{animation:as-lift 6s .4s ease infinite}
+                .as-stars{animation:as-fade 6s 1.5s ease infinite}
+                @keyframes as-bar{0%,5%{transform:scaleX(0);opacity:0}32%,72%{transform:scaleX(1);opacity:1}92%,100%{opacity:0}}
+                @keyframes as-fade{0%,15%{opacity:0;transform:translateY(5px)}36%,72%{opacity:1;transform:translateY(0)}92%,100%{opacity:0}}
+                @keyframes as-pop{0%,20%{opacity:0;transform:scale(.88)}40%,72%{opacity:1;transform:scale(1)}92%,100%{opacity:0}}
+                @keyframes as-lift{0%,5%{opacity:0;transform:translateY(14px)}32%,72%{opacity:1;transform:translateY(0)}92%,100%{opacity:0}}
+              </style>
+              <rect width="480" height="280" fill="#0d0d0d"/>
+              <rect width="480" height="44" fill="#141414"/>
+              <circle cx="18" cy="22" r="5" fill="#2a2a2a"/><circle cx="34" cy="22" r="5" fill="#2a2a2a"/><circle cx="50" cy="22" r="5" fill="#2a2a2a"/>
+              <rect x="68" y="13" width="200" height="18" rx="3" fill="#1a1a1a"/>
+              <text x="82" y="26" font-size="9" font-family="monospace" fill="#444">aufstiegscode.de</text>
+              <text x="295" y="29" font-size="9" font-family="monospace" fill="#333">Über das Buch</text>
+              <text x="398" y="29" font-size="9" font-family="monospace" fill="#333">Kaufen</text>
+              <rect y="44" width="480" height="1" fill="#1e1e1e"/>
+              <!-- Label -->
+              <text x="24" y="74" font-size="8.5" font-family="monospace" fill="#c8f050" letter-spacing=".15em">— DAS BUCH</text>
+              <!-- Headlines -->
+              <rect x="24" y="85" width="205" height="13" rx="2" fill="#dedede" class="as-h1"/>
+              <rect x="24" y="105" width="175" height="13" rx="2" fill="#dedede" class="as-h2"/>
+              <rect x="24" y="125" width="130" height="13" rx="2" fill="#c8f050" class="as-h3"/>
+              <!-- Subtext -->
+              <g class="as-sub">
+                <rect x="24" y="152" width="225" height="6" rx="1" fill="#2a2a2a"/>
+                <rect x="24" y="164" width="185" height="6" rx="1" fill="#1e1e1e"/>
+              </g>
+              <!-- CTA -->
+              <g class="as-btn">
+                <rect x="24" y="182" width="118" height="28" rx="4" fill="#c8f050"/>
+                <text x="83" y="200" font-size="9" font-family="monospace" fill="#0a0a0a" text-anchor="middle" font-weight="bold">Jetzt kaufen →</text>
+              </g>
+              <!-- Stars -->
+              <g class="as-stars">
+                <text x="24" y="230" font-size="12" font-family="monospace" fill="#c8f050">★★★★★</text>
+                <text x="102" y="230" font-size="9" font-family="monospace" fill="#444">4.9 · 120 Bewertungen</text>
+              </g>
+              <!-- Book cover -->
+              <g class="as-book">
+                <rect x="308" y="56" width="96" height="140" rx="3" fill="#141414" stroke="#c8f050" stroke-width="1" stroke-opacity=".35"/>
+                <rect x="312" y="60" width="88" height="132" rx="2" fill="#0f110c"/>
+                <text x="356" y="106" font-size="8" font-family="monospace" fill="#c8f050" text-anchor="middle" letter-spacing=".12em">AUFSTIEGS</text>
+                <text x="356" y="120" font-size="8" font-family="monospace" fill="#c8f050" text-anchor="middle" letter-spacing=".12em">CODE</text>
+                <rect x="326" y="128" width="60" height="1" fill="#c8f050" fill-opacity=".25"/>
+                <text x="356" y="146" font-size="7" font-family="monospace" fill="#444" text-anchor="middle">N.A. Bornhäußer</text>
+                <rect x="304" y="56" width="6" height="140" rx="1" fill="#c8f050" fill-opacity=".12"/>
+              </g>
+            </svg>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__cat">SAAS / LANDINGPAGE</span>
+            <h3 class="project-card__title">Aufstiegscode</h3>
+            <p class="project-card__desc">Landingpage für ein Fachbuch über digitalen Aufstieg. Conversion-optimiert, animiert, mit direktem Kaufprozess.</p>
+            <div class="project-card__meta">
+              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">GSAP</span></div>
+              <span class="project-card__arrow">↗</span>
+            </div>
+          </div>
+        </article>
+      </a>
+
+      <!-- 03 CREATIVATE.TECH -->
+      <a href="https://creativate.tech" target="_blank" rel="noopener" class="project-card-link">
+        <article class="project-card" data-reveal>
+          <div class="project-card__visual">
+            <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <style>
+                .cr-p3{animation:cr-layer 5s .6s ease infinite}
+                .cr-p2{animation:cr-layer 5s .3s ease infinite}
+                .cr-n1{animation:cr-nav 5s .15s ease infinite}
+                .cr-n2{animation:cr-nav 5s .25s ease infinite}
+                .cr-n3{animation:cr-nav 5s .35s ease infinite}
+                .cr-n4{animation:cr-nav 5s .45s ease infinite}
+                .cr-h1{transform-box:fill-box;transform-origin:0% 50%;animation:cr-bar 5s .55s ease infinite}
+                .cr-h2{transform-box:fill-box;transform-origin:0% 50%;animation:cr-bar 5s .72s ease infinite}
+                .cr-h3{transform-box:fill-box;transform-origin:0% 50%;animation:cr-bar 5s .88s ease infinite}
+                .cr-cta{animation:cr-fade 5s 1.05s ease infinite}
+                .cr-img{animation:cr-layer 5s .4s ease infinite}
+                @keyframes cr-layer{0%,5%{opacity:0;transform:translateY(10px)}30%,75%{opacity:1;transform:translateY(0)}95%,100%{opacity:0}}
+                @keyframes cr-nav{0%,8%{opacity:0;transform:translateY(-5px)}28%,76%{opacity:1;transform:translateY(0)}95%,100%{opacity:0}}
+                @keyframes cr-bar{0%,14%{transform:scaleX(0);opacity:0}36%,76%{transform:scaleX(1);opacity:1}95%,100%{opacity:0}}
+                @keyframes cr-fade{0%,20%{opacity:0}40%,76%{opacity:1}95%,100%{opacity:0}}
+              </style>
+              <rect width="480" height="280" fill="#0d0d0d"/>
+              <g class="cr-p3"><rect x="52" y="22" width="400" height="240" rx="6" fill="#0e0e0e" stroke="#1e1e1e" stroke-width="1"/></g>
+              <g class="cr-p2"><rect x="30" y="14" width="400" height="240" rx="6" fill="#111" stroke="#1e1e1e" stroke-width="1"/></g>
+              <rect x="8" y="6" width="400" height="242" rx="6" fill="#141414" stroke="#252525" stroke-width="1"/>
+              <rect x="8" y="6" width="400" height="42" rx="6" fill="#161616"/>
+              <rect x="8" y="36" width="400" height="12" fill="#161616"/>
+              <rect x="8" y="48" width="400" height="1" fill="#1e1e1e"/>
+              <text x="28" y="32" font-size="12" font-weight="bold" font-family="monospace" fill="#c8f050">creativate.</text>
+              <text x="175" y="31" font-size="9" font-family="monospace" fill="#4a4a4a" class="cr-n1">Home</text>
+              <text x="212" y="31" font-size="9" font-family="monospace" fill="#4a4a4a" class="cr-n2">About</text>
+              <text x="252" y="31" font-size="9" font-family="monospace" fill="#4a4a4a" class="cr-n3">Work</text>
+              <text x="290" y="31" font-size="9" font-family="monospace" fill="#4a4a4a" class="cr-n4">Contact</text>
+              <g class="cr-cta"><rect x="340" y="20" width="50" height="18" rx="3" fill="#c8f050"/><text x="365" y="32.5" font-size="8.5" font-family="monospace" fill="#0a0a0a" text-anchor="middle" font-weight="bold">Start ↗</text></g>
+              <text x="28" y="78" font-size="8.5" font-family="monospace" fill="#c8f050" letter-spacing=".18em" class="cr-n1">— TECH STARTUP · SWITZERLAND</text>
+              <rect x="28" y="94" width="195" height="13" rx="2" fill="#dedede" class="cr-h1"/>
+              <rect x="28" y="114" width="155" height="13" rx="2" fill="#dedede" class="cr-h2"/>
+              <rect x="28" y="134" width="115" height="13" rx="2" fill="#c8f050" class="cr-h3"/>
+              <g class="cr-cta">
+                <rect x="28" y="160" width="96" height="26" rx="4" fill="#c8f050"/>
+                <text x="76" y="177" font-size="9" font-family="monospace" fill="#0a0a0a" text-anchor="middle" font-weight="bold">Explore →</text>
+                <rect x="136" y="160" width="84" height="26" rx="4" fill="none" stroke="#2a2a2a" stroke-width="1"/>
+                <text x="178" y="177" font-size="9" font-family="monospace" fill="#555" text-anchor="middle">Get in Touch</text>
+              </g>
+              <g class="cr-img">
+                <rect x="264" y="58" width="120" height="156" rx="4" fill="#1a1a1a"/>
+                <rect x="278" y="72" width="92" height="50" rx="2" fill="#141414"/>
+                <rect x="278" y="130" width="42" height="6" rx="1" fill="#c8f050" fill-opacity=".4"/>
+                <rect x="278" y="142" width="70" height="4" rx="1" fill="#2a2a2a"/>
+                <rect x="278" y="152" width="55" height="4" rx="1" fill="#222"/>
+                <rect x="278" y="168" width="56" height="18" rx="3" fill="#c8f050" fill-opacity=".8"/>
+                <text x="306" y="181" font-size="7.5" font-family="monospace" fill="#0a0a0a" text-anchor="middle" font-weight="bold">Learn more</text>
+              </g>
+              <rect x="400" y="6" width="1" height="14" fill="#c8f050" opacity=".3"/>
+              <rect x="388" y="6" width="12" height="1" fill="#c8f050" opacity=".3"/>
+            </svg>
+          </div>
+          <div class="project-card__info">
+            <span class="project-card__cat">TECH STARTUP / HOMEPAGE</span>
+            <h3 class="project-card__title">creativate</h3>
+            <p class="project-card__desc">Startseite für eine Tech-Firma. Klares Branding, animiertes Hero, moderne Struktur — gebaut für einen starken ersten Eindruck.</p>
+            <div class="project-card__meta">
+              <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">GSAP</span><span class="tag">JavaScript</span></div>
+              <span class="project-card__arrow">↗</span>
+            </div>
+          </div>
+        </article>
+      </a>
+
+      <!-- 04 FASHION / CLOTHING (link kommt noch) -->
+      <article class="project-card project-card--soon" data-reveal>
         <div class="project-card__visual">
           <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <style>
-              .c3-b1{transform-box:fill-box;transform-origin:50% 100%;animation:c3-bar 5s 0s ease-in-out infinite}
-              .c3-b2{transform-box:fill-box;transform-origin:50% 100%;animation:c3-bar 5s .12s ease-in-out infinite}
-              .c3-b3{transform-box:fill-box;transform-origin:50% 100%;animation:c3-bar 5s .24s ease-in-out infinite}
-              .c3-b4{transform-box:fill-box;transform-origin:50% 100%;animation:c3-bar 5s .36s ease-in-out infinite}
-              .c3-b5{transform-box:fill-box;transform-origin:50% 100%;animation:c3-bar 5s .48s ease-in-out infinite}
-              .c3-line{animation:c3-draw 5s .5s ease-in-out infinite;stroke-dasharray:320}
-              .c3-dot{animation:c3-dpulse 2.2s ease-in-out infinite}
-              .c3-num{animation:c3-fade 5s .3s ease infinite}
-              @keyframes c3-bar{0%,5%{transform:scaleY(0)}38%,72%{transform:scaleY(1)}95%,100%{transform:scaleY(0)}}
-              @keyframes c3-draw{0%,10%{stroke-dashoffset:320;opacity:0}42%,78%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}
-              @keyframes c3-dpulse{0%,100%{opacity:1;r:4}50%{opacity:.5;r:7}}
-              @keyframes c3-fade{0%,5%{opacity:0}28%,78%{opacity:1}95%,100%{opacity:0}}
+              .fa-i1{animation:fa-card 6s .2s ease infinite}
+              .fa-i2{animation:fa-card 6s .45s ease infinite}
+              .fa-i3{animation:fa-card 6s .68s ease infinite}
+              .fa-i4{animation:fa-card 6s .9s ease infinite}
+              .fa-i5{animation:fa-card 6s 1.1s ease infinite}
+              .fa-i6{animation:fa-card 6s 1.3s ease infinite}
+              .fa-badge{animation:fa-pop 6s 1.6s ease infinite}
+              @keyframes fa-card{0%,5%{opacity:0;transform:translateY(8px)}28%,72%{opacity:1;transform:translateY(0)}92%,100%{opacity:0}}
+              @keyframes fa-pop{0%,22%{opacity:0;transform:scale(0)}42%,72%{opacity:1;transform:scale(1)}92%,100%{opacity:0}}
             </style>
             <rect width="480" height="280" fill="#0d0d0d"/>
             <rect width="480" height="44" fill="#141414"/>
-            <text x="24" y="27" font-size="12" font-weight="bold" font-family="sans-serif" fill="#e0e0e0">Analytics Dashboard</text>
-            <text x="374" y="22" font-size="15" font-weight="bold" font-family="monospace" fill="#c8f050" class="c3-num">$12,459</text>
-            <text x="374" y="36" font-size="9" font-family="monospace" fill="#4a8a3a" class="c3-num">↑ 18.3%</text>
+            <circle cx="18" cy="22" r="5" fill="#2a2a2a"/><circle cx="34" cy="22" r="5" fill="#2a2a2a"/><circle cx="50" cy="22" r="5" fill="#2a2a2a"/>
+            <rect x="68" y="13" width="180" height="18" rx="3" fill="#1a1a1a"/>
+            <text x="82" y="26" font-size="9" font-family="monospace" fill="#444">fashion-store.de</text>
             <rect y="44" width="480" height="1" fill="#1e1e1e"/>
-            <!-- Grid -->
-            <line x1="62" y1="58" x2="62" y2="198" stroke="#1a1a1a" stroke-width="1"/>
-            <line x1="62" y1="58" x2="390" y2="58" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4"/>
-            <line x1="62" y1="98" x2="390" y2="98" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4"/>
-            <line x1="62" y1="138" x2="390" y2="138" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4,4"/>
-            <line x1="62" y1="198" x2="390" y2="198" stroke="#1e1e1e" stroke-width="1"/>
-            <text x="54" y="62" font-size="8" font-family="monospace" fill="#333" text-anchor="end">15k</text>
-            <text x="54" y="102" font-size="8" font-family="monospace" fill="#333" text-anchor="end">10k</text>
-            <text x="54" y="142" font-size="8" font-family="monospace" fill="#333" text-anchor="end">5k</text>
-            <!-- Bars -->
-            <rect x="72" y="118" width="38" height="80" rx="2" fill="#c8f050" fill-opacity=".22" class="c3-b1"/>
-            <rect x="134" y="78" width="38" height="120" rx="2" fill="#c8f050" fill-opacity=".22" class="c3-b2"/>
-            <rect x="196" y="98" width="38" height="100" rx="2" fill="#c8f050" fill-opacity=".22" class="c3-b3"/>
-            <rect x="258" y="58" width="38" height="140" rx="2" fill="#c8f050" fill-opacity=".45" class="c3-b4"/>
-            <rect x="258" y="58" width="38" height="5" rx="1" fill="#c8f050" class="c3-b4"/>
-            <rect x="320" y="103" width="38" height="95" rx="2" fill="#c8f050" fill-opacity=".22" class="c3-b5"/>
-            <!-- Line -->
-            <polyline points="91,158 153,118 215,138 277,98 339,123" fill="none" stroke="#c8f050" stroke-width="2" class="c3-line"/>
-            <circle cx="277" cy="98" r="4" fill="#c8f050" class="c3-dot"/>
-            <!-- X labels -->
-            <text x="91" y="212" font-size="8" font-family="monospace" fill="#333" text-anchor="middle">Jan</text>
-            <text x="153" y="212" font-size="8" font-family="monospace" fill="#333" text-anchor="middle">Feb</text>
-            <text x="215" y="212" font-size="8" font-family="monospace" fill="#333" text-anchor="middle">Mar</text>
-            <text x="277" y="212" font-size="8" font-family="monospace" fill="#c8f050" text-anchor="middle">Apr</text>
-            <text x="339" y="212" font-size="8" font-family="monospace" fill="#333" text-anchor="middle">May</text>
-            <!-- Metrics -->
-            <rect y="225" width="480" height="1" fill="#1e1e1e"/>
-            <text x="80" y="248" font-size="9" font-family="monospace" fill="#444" text-anchor="middle">Sessions</text>
-            <text x="80" y="263" font-size="12" font-weight="bold" font-family="monospace" fill="#888" text-anchor="middle" class="c3-num">4,821</text>
-            <text x="240" y="248" font-size="9" font-family="monospace" fill="#444" text-anchor="middle">Conversions</text>
-            <text x="240" y="263" font-size="12" font-weight="bold" font-family="monospace" fill="#888" text-anchor="middle" class="c3-num">12.4%</text>
-            <text x="390" y="248" font-size="9" font-family="monospace" fill="#444" text-anchor="middle">Revenue</text>
-            <text x="390" y="263" font-size="12" font-weight="bold" font-family="monospace" fill="#c8f050" text-anchor="middle" class="c3-num">$12,459</text>
+            <text x="24" y="68" font-size="13" font-weight="bold" font-family="sans-serif" fill="#e0e0e0">New Arrivals</text>
+            <text x="400" y="68" font-size="9" font-family="monospace" fill="#c8f050">Filter ▾</text>
+            <!-- Row 1 product cards -->
+            <g class="fa-i1">
+              <rect x="24" y="78" width="132" height="85" rx="3" fill="#1a1a1a"/>
+              <rect x="28" y="82" width="124" height="64" rx="2" fill="#141414"/>
+              <text x="90" y="120" font-size="22" text-anchor="middle" fill="#2a2a2a">✦</text>
+              <text x="24" y="174" font-size="8" font-family="monospace" fill="#666">T-SHIRT BASIC</text>
+              <text x="24" y="186" font-size="9" font-family="monospace" fill="#c8f050">€ 29</text>
+            </g>
+            <g class="fa-i2">
+              <rect x="172" y="78" width="132" height="85" rx="3" fill="#1a1a1a"/>
+              <rect x="176" y="82" width="124" height="64" rx="2" fill="#141414"/>
+              <text x="238" y="120" font-size="22" text-anchor="middle" fill="#2a2a2a">✦</text>
+              <text x="172" y="174" font-size="8" font-family="monospace" fill="#666">HOODIE SLIM</text>
+              <text x="172" y="186" font-size="9" font-family="monospace" fill="#c8f050">€ 69</text>
+            </g>
+            <g class="fa-i3">
+              <rect x="320" y="78" width="136" height="85" rx="3" fill="#1a1a1a"/>
+              <rect x="324" y="82" width="128" height="64" rx="2" fill="#141414"/>
+              <text x="388" y="120" font-size="22" text-anchor="middle" fill="#2a2a2a">✦</text>
+              <text x="320" y="174" font-size="8" font-family="monospace" fill="#666">JACKET URBAN</text>
+              <text x="320" y="186" font-size="9" font-family="monospace" fill="#c8f050">€ 129</text>
+            </g>
+            <!-- Row 2 -->
+            <g class="fa-i4"><rect x="24" y="198" width="132" height="62" rx="3" fill="#1a1a1a"/></g>
+            <g class="fa-i5"><rect x="172" y="198" width="132" height="62" rx="3" fill="#1a1a1a"/></g>
+            <g class="fa-i6"><rect x="320" y="198" width="136" height="62" rx="3" fill="#1a1a1a"/></g>
+            <!-- Sale badge -->
+            <g class="fa-badge">
+              <rect x="130" y="76" width="32" height="15" rx="7" fill="#c8f050"/>
+              <text x="146" y="87.5" font-size="7.5" font-family="monospace" fill="#0a0a0a" text-anchor="middle" font-weight="bold">SALE</text>
+            </g>
           </svg>
         </div>
         <div class="project-card__info">
-          <span class="project-card__cat">DASHBOARD / DATA VIZ</span>
-          <h3 class="project-card__title">Analytics Dashboard</h3>
-          <p class="project-card__desc">An interactive e-commerce dashboard with real-time data, API tracking and full data visualisation.</p>
+          <span class="project-card__cat">FASHION / E-COMMERCE</span>
+          <h3 class="project-card__title">Kleidungsmarke</h3>
+          <p class="project-card__desc">Landingpage für eine Kleidungsfirma. Produktgrid, animierte Hero-Sektion, mobil-optimiert. Link folgt in Kürze.</p>
           <div class="project-card__meta">
-            <div class="project-card__tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Chart.js</span></div>
-            <span class="project-card__arrow">↗</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- 04 FULL BUSINESS WEBSITE -->
-      <article class="project-card" data-reveal>
-        <div class="project-card__visual">
-          <svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <style>
-              .c4-p3{animation:c4-layer 5s .6s ease infinite}
-              .c4-p2{animation:c4-layer 5s .3s ease infinite}
-              .c4-n1{animation:c4-nav 5s .15s ease infinite}
-              .c4-n2{animation:c4-nav 5s .25s ease infinite}
-              .c4-n3{animation:c4-nav 5s .35s ease infinite}
-              .c4-n4{animation:c4-nav 5s .45s ease infinite}
-              .c4-h1{transform-box:fill-box;transform-origin:0% 50%;animation:c4-bar 5s .55s ease infinite}
-              .c4-h2{transform-box:fill-box;transform-origin:0% 50%;animation:c4-bar 5s .72s ease infinite}
-              .c4-h3{transform-box:fill-box;transform-origin:0% 50%;animation:c4-bar 5s .88s ease infinite}
-              .c4-cta{animation:c4-fade 5s 1.05s ease infinite}
-              .c4-img{animation:c4-layer 5s .4s ease infinite}
-              @keyframes c4-layer{0%,5%{opacity:0;transform:translateY(10px)}30%,75%{opacity:1;transform:translateY(0)}95%,100%{opacity:0}}
-              @keyframes c4-nav{0%,8%{opacity:0;transform:translateY(-5px)}28%,76%{opacity:1;transform:translateY(0)}95%,100%{opacity:0}}
-              @keyframes c4-bar{0%,14%{transform:scaleX(0);opacity:0}36%,76%{transform:scaleX(1);opacity:1}95%,100%{opacity:0}}
-              @keyframes c4-fade{0%,20%{opacity:0}40%,76%{opacity:1}95%,100%{opacity:0}}
-            </style>
-            <rect width="480" height="280" fill="#0d0d0d"/>
-            <!-- Stacked background pages -->
-            <g class="c4-p3"><rect x="52" y="22" width="400" height="240" rx="6" fill="#0e0e0e" stroke="#1e1e1e" stroke-width="1"/></g>
-            <g class="c4-p2"><rect x="30" y="14" width="400" height="240" rx="6" fill="#111" stroke="#1e1e1e" stroke-width="1"/></g>
-            <!-- Main page -->
-            <rect x="8" y="6" width="400" height="242" rx="6" fill="#141414" stroke="#252525" stroke-width="1"/>
-            <!-- Nav bar -->
-            <rect x="8" y="6" width="400" height="42" rx="6" fill="#161616"/>
-            <rect x="8" y="36" width="400" height="12" fill="#161616"/>
-            <rect x="8" y="48" width="400" height="1" fill="#1e1e1e"/>
-            <text x="28" y="32" font-size="13" font-weight="bold" font-family="monospace" fill="#c8f050">FORMA.</text>
-            <text x="175" y="31" font-size="9" font-family="monospace" fill="#4a4a4a" class="c4-n1">Home</text>
-            <text x="212" y="31" font-size="9" font-family="monospace" fill="#4a4a4a" class="c4-n2">About</text>
-            <text x="252" y="31" font-size="9" font-family="monospace" fill="#4a4a4a" class="c4-n3">Work</text>
-            <text x="290" y="31" font-size="9" font-family="monospace" fill="#4a4a4a" class="c4-n4">Contact</text>
-            <g class="c4-cta"><rect x="340" y="20" width="50" height="18" rx="3" fill="#c8f050"/><text x="365" y="32.5" font-size="8.5" font-family="monospace" fill="#0a0a0a" text-anchor="middle" font-weight="bold">Book ↗</text></g>
-            <!-- Agency label -->
-            <text x="28" y="78" font-size="8.5" font-family="monospace" fill="#c8f050" letter-spacing=".2em" class="c4-n1">— CREATIVE AGENCY BERLIN</text>
-            <!-- Hero headlines -->
-            <rect x="28" y="94" width="195" height="13" rx="2" fill="#dedede" class="c4-h1"/>
-            <rect x="28" y="114" width="155" height="13" rx="2" fill="#dedede" class="c4-h2"/>
-            <rect x="28" y="134" width="115" height="13" rx="2" fill="#c8f050" class="c4-h3"/>
-            <!-- CTAs -->
-            <g class="c4-cta">
-              <rect x="28" y="160" width="92" height="26" rx="4" fill="#c8f050"/>
-              <text x="74" y="177" font-size="9" font-family="monospace" fill="#0a0a0a" text-anchor="middle" font-weight="bold">Our Work →</text>
-              <rect x="132" y="160" width="82" height="26" rx="4" fill="none" stroke="#2a2a2a" stroke-width="1"/>
-              <text x="173" y="177" font-size="9" font-family="monospace" fill="#555" text-anchor="middle">Get in Touch</text>
-            </g>
-            <text x="28" y="210" font-size="9" font-family="monospace" fill="#333" class="c4-cta">clients: 8+</text>
-            <!-- Right image box -->
-            <g class="c4-img">
-              <rect x="264" y="58" width="120" height="156" rx="4" fill="#1a1a1a"/>
-              <text x="324" y="145" font-size="28" text-anchor="middle" fill="#2a2a2a">⌂</text>
-            </g>
-            <!-- Corner accents -->
-            <rect x="400" y="6" width="1" height="14" fill="#c8f050" opacity=".3"/>
-            <rect x="388" y="6" width="12" height="1" fill="#c8f050" opacity=".3"/>
-            <rect x="8" y="234" width="1" height="14" fill="#c8f050" opacity=".15"/>
-            <rect x="8" y="247" width="14" height="1" fill="#c8f050" opacity=".15"/>
-          </svg>
-        </div>
-        <div class="project-card__info">
-          <span class="project-card__cat">MULTI-PAGE WEBSITE</span>
-          <h3 class="project-card__title">Full Business Website</h3>
-          <p class="project-card__desc">Complete business presence with smooth animations, CMS integration and mobile-first responsive design.</p>
-          <div class="project-card__meta">
-            <div class="project-card__tags"><span class="tag">WordPress</span><span class="tag">GSAP</span><span class="tag">WooCommerce</span></div>
-            <span class="project-card__arrow">↗</span>
+            <div class="project-card__tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+            <span class="project-card__arrow project-card__arrow--soon">–</span>
           </div>
         </div>
       </article>
@@ -461,67 +462,24 @@
   </section>
 
   <!-- ============================================================
-       SEKTION 5: PRICING
+       SEKTION 5: ZITAT
        ============================================================ -->
-  <section id="pricing">
-    <div class="pricing__header" data-reveal>
-      <p class="pricing__label">Pricing</p>
-      <h2 class="pricing__heading">Fixed prices. No surprises.</h2>
-      <p class="pricing__sub">Fixed-price packages for common needs. Custom quotes available — just ask.</p>
+  <section id="quote">
+    <div class="quote__header" data-reveal>
+      <p class="quote__label">Statement</p>
+      <h2 class="quote__heading">In eigenen Worten.</h2>
     </div>
-
-    <div class="pricing__grid">
-
-      <div class="plan-card" data-reveal>
-        <p class="plan-card__tier">STARTER</p>
-        <div class="plan-card__price">
-          <span class="plan-card__price-val">€499</span>
-        </div>
-        <p class="plan-card__period">one-time · 5 day delivery</p>
-        <ul class="plan-card__features">
-          <li>1-page landing page</li>
-          <li>Mobile responsive</li>
-          <li>Contact form</li>
-          <li>GitHub deploy</li>
-          <li>1 revision round</li>
-        </ul>
-        <a href="#contact" class="plan-card__cta">Get started</a>
-      </div>
-
-      <div class="plan-card plan-card--featured" data-reveal>
-        <div class="plan-card__badge">MOST POPULAR</div>
-        <p class="plan-card__tier">PROFESSIONAL</p>
-        <div class="plan-card__price">
-          <span class="plan-card__price-val plan-card__price-val--accent">€1,200</span>
-        </div>
-        <p class="plan-card__period">one-time · 10 day delivery</p>
-        <ul class="plan-card__features">
-          <li>Multi-page website (up to 5)</li>
-          <li>WordPress or custom HTML/CSS/JS</li>
-          <li>Animations &amp; interactions</li>
-          <li>SEO basics + Google Analytics</li>
-          <li>3 revision rounds</li>
-          <li>2 weeks post-delivery support</li>
-        </ul>
-        <a href="#contact" class="plan-card__cta plan-card__cta--filled">Get started</a>
-      </div>
-
-      <div class="plan-card" data-reveal>
-        <p class="plan-card__tier">CUSTOM</p>
-        <div class="plan-card__price">
-          <span class="plan-card__price-val plan-card__price-val--talk" data-i18n="price2">Let's talk</span>
-        </div>
-        <p class="plan-card__period">scoped to your project</p>
-        <ul class="plan-card__features">
-          <li>Web apps &amp; dashboards</li>
-          <li>Python automation &amp; APIs</li>
-          <li>WooCommerce / e-commerce</li>
-          <li>Ongoing retainer possible</li>
-          <li>Milestone-based billing</li>
-        </ul>
-        <a href="#contact" class="plan-card__cta">Request quote</a>
-      </div>
-
+    <div class="quote__card" data-reveal>
+      <blockquote class="quote__text">
+        Autodidaktischer Entwickler mit unternehmerischem Hintergrund und einem klaren Fokus auf funktionierende
+        Lösungen. Ich habe eigenständig Webanwendungen, KI-gestützte Tools und digitale Produkte entwickelt – nicht als
+        Übung, sondern mit dem Anspruch, sie tatsächlich einzusetzen und einen konkreten Nutzen zu schaffen. Mein Weg
+        von der handwerklichen Ausbildung über die Gründung und erfolgreiche Führung eines Restaurants bis hin zur
+        Softwareentwicklung war nicht geradlinig, hat mich aber geprägt: Ich bringe Projekte zu Ende, übernehme
+        Verantwortung und arbeite mich schnell und selbstständig in neue Themen ein. Dieses Fundament möchte ich nun
+        durch eine Ausbildung zum Fachinformatiker für Anwendungsentwicklung gezielt vertiefen und weiter ausbauen.
+      </blockquote>
+      <cite class="quote__author">— Nino-Alexander Bornhäußer</cite>
     </div>
   </section>
 
@@ -583,7 +541,6 @@
       <!-- Social Links -->
       <div class="contact__links" data-reveal>
         <a class="contact__link" href="https://github.com/ninoborn1-stack" target="_blank" rel="noopener">GitHub</a>
-        <a class="contact__link" href="#" target="_blank" rel="noopener">LinkedIn</a>
         <a class="contact__link" href="mailto:your@email.com">E-Mail</a>
       </div>
     </div>
@@ -608,7 +565,7 @@
   </div>
 
   <!-- main.js am Ende — damit das DOM schon geladen ist wenn JS läuft -->
-  <script type="module" src="main.js?v=32"></script>
+  <script type="module" src="main.js?v=33"></script>
 
   <!-- head-scene.js als ES Module (nutzt Import Map für 'three') -->
   <script type="module" src="head-scene.js?v=14"></script>
